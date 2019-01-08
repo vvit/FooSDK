@@ -28,7 +28,7 @@ $ carthage archive Simpo
 $ git tag -a v1.0.0 -m "New version info"
 $ git push --tags
 ```
-6. Edit the pushed tag directly on GitHub: Repo > Releases > Open the tag > Edit tag > set release title and attach a new version of the binary framework > Publish Release.
+6. Edit the pushed tag directly on GitHub: Repo > Releases > Open the tag > Edit tag > set release title and attach a new version of the zipped binary framework (located at `<project-root>/Simpo.framework.zip`) > Publish Release.
 
 ### SDK installation via Carthage
 
