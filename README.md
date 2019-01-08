@@ -42,7 +42,7 @@ $ brew install carthage
 `github "vvit/SimpoSDK" ~> 1.0` or `github "vvit/SimpoSDK" >= 1.0.1`
 3. Install the dependency:  
 `carthage update --platform iOS` or `carthage bootstrap`
-4. Add `Simpo.framework` to the `Linked Frameworks and Libraries`:  
+4. Add `Simpo.framework` (located in `<project-root>/Carthage/Build/iOS`) to the `Linked Frameworks and Libraries`:  
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage1.png)
 5. Add a `Run Script` build phase with this content:  
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage2.png)
