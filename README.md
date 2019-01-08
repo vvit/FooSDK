@@ -1,7 +1,7 @@
 # Simpo SDK
 
-This is a dynamic framework which is distributed with closed sources.
-Latest version 1.0.2
+This is a dynamic framework which is distributed with closed sources.  
+Latest version: 1.0.2
 
 Can be installed either via Carthage or CocoaPod.
 
