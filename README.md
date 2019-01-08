@@ -3,7 +3,9 @@
 This is a dynamic framework which is distributed with closed sources.  
 Latest version: 1.0.2
 
-Can be installed either via Carthage or CocoaPod.
+Can be installed using these dependency managers:
+- [Carthage](#carthage)
+- [CocoaPods](#cocoapods)
 
 ## Carthage
 ### Distribution via Carthage
@@ -34,7 +36,6 @@ $ git push --tags
 
 1. Install Carthage  
 ```bash
-$ sudo gem install cocoapods
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install carthage
 ```
@@ -46,3 +47,14 @@ $ brew install carthage
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage1.png)
 5. Add a `Run Script` build phase with this content:  
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage2.png)
+
+
+## CocoaPods
+### Distribution via CocoaPods
+
+### SDK installation via CocoaPods
+
+1. Install CocoaPods  
+```bash
+$ sudo gem install cocoapods
+```
