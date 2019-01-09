@@ -56,6 +56,10 @@ $ brew install carthage
 3. Run `Product > Archive` 
 4. Wait until the Finder opens the folder with the zipped framework (root project dir). It takes a while so need to wait.
 5. The zipped file can be used as an attachment in the new GitHub Release.
+6. Update `SimpoTest.podspec` and set new version and the new framework URL of the github release (in `s.version` and `s.source`)
+7. (If needed) check the edited spec file: `pod spec lint`
+8. (If needed) register the cocoa pod trunk: `pod trunk register yourname@yourcompany.com 'Your Name'`
+9. Publish the pod: `pod trunk push SimpoTest.podspec` (takes a while since the binary will be checked).
 
 ### SDK installation via CocoaPods
 
