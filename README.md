@@ -13,7 +13,7 @@ Described [here](https://github.com/Carthage/Carthage#supporting-carthage-for-yo
 
 1. Prepare a binary framework:  
 open a directory where `Simpo.xcworkspace` is located
-2. Build and archive the framework _(TODO: a fat binary must be created!)_ :  
+2. Build and archive the fat dynamic framework:  
 ```bash
 $ carthage build --archive
 ```
@@ -51,10 +51,20 @@ $ brew install carthage
 
 ## CocoaPods
 ### Distribution via CocoaPods
+1. Prepare a binary framework: open `Simpo.xcworkspace`
+2. Select `Simpo` target and `Generic iOS Device` on top panel
+3. Run `Product > Archive` 
+4. Wait until the Finder opens the folder with the zipped framework (root project dir). It takes a while so need to wait.
+5. The zipped file can be used as an attachment in the new GitHub Release.
 
 ### SDK installation via CocoaPods
 
 1. Install CocoaPods  
 ```bash
 $ sudo gem install cocoapods
+```
+2. Install the dependency by adding this `pod 'SimpoSDK'` into the `Podfile`  
+Then run
+```bash
+$ pod update
 ```
