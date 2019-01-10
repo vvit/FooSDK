@@ -27,7 +27,26 @@ carthage update --platform iOS
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage1.png)
 5. Add a `Run Script` build phase with this content:  
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage2.png)
+6. Optional if CocoaPods script exists (`[CP] Embed Pods Frameworks`).  
+Solves the AppStore submission issue.  
+Add a `Run Script` build phase with the name `Carthage Strip Architectures` and this content:
+```bash
+FRAMEWORK="Simpo"
+FRAMEWORK_EXECUTABLE_PATH="${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/$FRAMEWORK.framework/$FRAMEWORK"
+EXTRACTED_ARCHS=()
 
+echo "Stripping the Simpo framework"
+
+for ARCH in $ARCHS
+do
+lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+done
+lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+rm "${EXTRACTED_ARCHS[@]}"
+rm "$FRAMEWORK_EXECUTABLE_PATH"
+mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+```
 
 ## CocoaPods
 
