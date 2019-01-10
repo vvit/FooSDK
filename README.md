@@ -27,7 +27,7 @@ carthage update --platform iOS
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage1.png)
 5. Add a `Run Script` build phase with this content:  
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage2.png)
-6. Optional if CocoaPods script exists (`[CP] Embed Pods Frameworks`).  
+6. Optional if CocoaPods script `[CP] Embed Pods Frameworks` exists.  
 Solves the AppStore submission issue.  
 Add a `Run Script` build phase with the name `Carthage Strip Architectures` and this content:
 ```bash
