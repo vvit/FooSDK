@@ -15,10 +15,14 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 $ brew install carthage
 ```
 2. Create `Cartfile` in the project root dir with the content:  
-`github "vvit/SimpoSDK"`  
+```bash
+github "vvit/SimpoSDK"
+```
 _TODO: update repo path_  
 3. Install the dependency:  
-`carthage update --platform iOS`
+```bash
+carthage update --platform iOS
+```
 4. Add `Simpo.framework` (located in `<project-root>/Carthage/Build/iOS`) to the `Linked Frameworks and Libraries`:  
 ![picture](https://github.com/vvit/SimpoSDK/blob/master/carthage1.png)
 5. Add a `Run Script` build phase with this content:  
@@ -31,9 +35,11 @@ _TODO: update repo path_
 ```bash
 $ sudo gem install cocoapods
 ```
-2. If needed (first time) run: `pod init`
-3. Install the dependency by adding `pod 'SimpoTest'` _(TODO: update name)_ into the `Podfile`  
-Then run
+2. If needed (first time) run:
+```bash
+pod init
+```
+3. Install the dependency by adding `pod 'SimpoTest'` _(TODO: update name)_ into the `Podfile`. Then run:
 ```bash
 $ pod update
 ```
